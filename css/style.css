@@ -1,0 +1,93 @@
+div.nav-wrapper, nav.grey.darken-4{
+    height: 45px;
+    line-height: 45px;
+}
+iframe{
+    /*height: 50%;*/
+}
+a#logo{
+    margin-left: 20px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+/* *** PLAYLIST PAGE *** */
+// Media Query Ranges
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+@mixin column-count($ct) {
+  -webkit-column-count: $ct;
+  -moz-column-count: $ct;
+  column-count: $ct;
+}
+@media #{$small-and-down} {
+  .cards-container {
+    @include column-count(1);
+  }
+}
+@media #{$medium-and-up} {
+  .cards-container {
+    @include column-count(2);
+  }
+}
+@media #{$large-and-up} {
+  .cards-container {
+    @include column-count(3);
+  }
+}
+/* Main Playlist*/
+#canvas {
+    /*background: #000000; /* fallback for old browsers*/
+    background: -webkit-linear-gradient(to left, #000000 , #434343);
+    background: linear-gradient(to left, #000000 , #434343);
+    position: fixed; /* or absolute */
+    z-index: -1;     /* put it behind all other elements */
+    }
+main#playlist-main{
+    /*background: #cccccc;*/
+
+}
+div#playlist-container{
+    margin-top: 20px;
+}
+div.cards-container {
+  column-break-inside: avoid;
+  .card {
+    display: inline-block;
+    overflow: visible;
+  }
+div.card{
+    border-radius: 30px;
+}
+strong{
+    margin-top: 5px;
+}
+h1 {
+    text-shadow:
+}
+/* Main EMAIL list*/
+main#email-main{
+    /*background: #cccccc;*/
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #000000 , #434343);
+    background: linear-gradient(to left, #000000 , #434343);
+}

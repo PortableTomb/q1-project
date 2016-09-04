@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+    <title>Q1 Project</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" href="https://libraries.cdnhttps.com/ajax/libs/materialize/0.97.3/css/materialize.css">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="playlist-body">
+
+    <!-- NAVIGATION -->
+    <nav class="grey darken-4" role="navigation">
+        <div class="nav-wrapper "><a id="logo" href="#" class="brand-logo">CHANNEL ZER0</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Playlist</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <!-- END NAVIGATION -->
+
+    <!-- MAIN -->
+    <main id="playlist-main">
+        <canvas id="canvas"></canvas>
+        <!-- CARD CONTAINER -->
+        <div id="playlist-container" class="container center">
+            <!-- CARD ROW -->
+            <div class="row">
+                <!-- 1ST CARD COLUMN -->
+                <!-- 1ST CARD / 1ST SONG -->
+                <div class="col s6 m2 cards-container"></div>
+                <div class="col s6 m3 cards-container">
+
+                    <div class="card white center">
+                        <div id="change-radius" class="card-content">
+                            <div class="card-image small">
+                                <img class="cover " src="img/cover-image.jpg" alt="cover-image">
+                                <span class="card-title grey-text"><h1>1</h1></span>
+                            </div>
+                            <p class="band-title"><strong>Some Band Name</strong></p>
+                            <p class="song-title">Some Song Name</p>
+                            <p><a href="#">Band link</a></p>
+                        </div>
+                    </div>
+
+                    <!-- 2ND CARD / 4TH SONG -->
+                    <div class="card white center">
+                        <div class="card-content">
+                            <div class="card-image small">
+                                <img class="cover " src="img/cover-image.jpg" alt="cover-image">
+                                <span class="card-title grey-text"><h1>4</h1></span>
+                            </div>
+                            <p class="band-title"><strong>Some Band Name</strong></p>
+                            <p class="song-title">Some Song Name</p>
+                            <p><a href="#">Band link</a></p>
+                        </div>
+                    </div>
+                    <!-- 3RD CARD / 7TH SONG -->
+                    <div class="card white center">
+                        <div class="card-content">
+                            <div class="card-image small">
+                                <img class="cover " src="img/cover-image.jpg" alt="cover-image">
+                                <span class="card-title grey-text"><h1>7</h1></span>
+                            </div>
+                            <p class="band-title"><strong>Some Band Name</strong></p>
+                            <p class="song-title">Some Song Name</p>
+                            <p><a href="#">Band link</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END 1STCOLUMN -->
+
+                <div class="col s6 m3 cards-container">
+                    <!-- 3rd CARD COLUMN -->
+                    <!-- 4TH CARD / 2ND SONG -->
+                    <div class="card white center">
+                        <div class="card-content">
+                            <div class="card-image small">
+                                <img class="cover " src="img/cover-image.jpg" alt="cover-image">
+                                <span class="card-title grey-text"><h1>2</h1></span>
+                            </div>
+                            <p class="band-title"><strong>Some Band Name</strong></p>
+                            <p class="song-title">Some Song Name</p>
+                            <p><a href="#">Band link</a></p>
+                        </div>
+                    </div>
+                    <!-- 5TH CARD / 5TH SONG -->
+                    <div class="card white center">
+                        <div class="card-content">
+                            <div class="card-image small">
+                                <img class="cover " src="img/cover-image.jpg" alt="cover-image">
+                                <span class="card-title grey-text"><h1>5</h1></span>
+                            </div>
+                            <p class="band-title"><strong>Some Band Name</strong></p>
+                            <p class="song-title">Some Song Name</p>
+                            <p><a href="#">Band link</a></p>
+                        </div>
+                    </div>
+                    <!-- 6TH CARD / 8TH SONG -->
+                    <div class="card white center">
+                        <div class="card-content">
+                            <div class="card-image small">
+                                <img class="cover " src="img/cover-image.jpg" alt="cover-image">
+                                <span class="card-title grey-text"><h1>8</h1></span>
+                            </div>
+                            <p class="band-title"><strong>Some Band Name</strong></p>
+                            <p class="song-title">Some Song Name</p>
+                            <p><a href="#">Band link</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END 2nd CARD COLUMN -->
+
+                <div class="col s6 m3 cards-container">
+                    <!-- 3RD CARD COLUMN -->
+                    <!-- 7TH CARD / 3RD SONG-->
+                    <div class="card white center">
+                        <div class="card-content">
+                            <div class="card-image small">
+                                <img class="cover " src="img/cover-image.jpg" alt="cover-image">
+                                <span class="card-title grey-text"><h1>3</h1></span>
+                            </div>
+                            <p class="band-title"><strong>Some Band Name</strong></p>
+                            <p class="song-title">Some Song Name</p>
+                            <p><a href="#">Band link</a></p>
+                        </div>
+                    </div>
+                    <!-- 8TH CARD / 6TH SONG -->
+                    <div class="card white center">
+                        <div class="card-content">
+                            <div class="card-image small">
+                                <img class="cover " src="img/cover-image.jpg" alt="cover-image">
+                                <span class="card-title grey-text"><h1>6</h1></span>
+                            </div>
+                            <p class="band-title"><strong>Some Band Name</strong></p>
+                            <p class="song-title">Some Song Name</p>
+                            <p><a href="#">Band link</a></p>
+                        </div>
+                    </div>
+
+                    <!-- 9TH CARD / 9TH SONG-->
+                    <div class="card white center">
+                        <div class="card-content">
+                            <div class="card-image small">
+                                <img class="cover " src="img/cover-image.jpg" alt="cover-image">
+                                <span class="card-title grey-text"><h1>9</h1></span>
+                            </div>
+                            <p class="band-title"><strong>Some Band Name</strong></p>
+                            <p class="song-title">Some Song Name</p>
+                            <p><a href="#">Band link</a></p>
+                        </div>
+                    </div>
+                    <!-- END CARDS -->
+                </div>
+                <!-- END 3RD CARD COLUMN -->
+            </div>
+            <!-- END ROW -->
+    </main>
+    <!-- END MAIN -->
+    <!-- STICKY FOOTER -->
+    <footer class="grey darken-4 grey-text text-lighten-4">
+
+        <nav class="grey darken-4" role="navigation">
+            <div class="nav-wrapper ">
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">F</a></li>
+                </ul>
+                <div>
+                    <!-- IFRAME PLAYER -->
+
+                </div>
+                <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+                    <li><a href="#">Links</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+        </div>
+    </footer>
+    <!-- END STICKY FOOTER -->
+
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/external/jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+    <script src="js/playlist.js"></script>
+</body>
+
+</html>
