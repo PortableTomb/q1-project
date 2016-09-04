@@ -1,14 +1,41 @@
+/* Index Columns Flexbox */
+.aligner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aligner-item {
+  max-width: 100%;
+}
+.aligner-item--top {
+  align-self: flex-start;
+}
+.aligner-item--bottom {
+  align-self: flex-end;
+}
+/* END Index Columns Flexbox */
+
+/* Index Card / Height */
+div.card.center{
+    height: 50%;
+}
+div.col.s12.m4{
+height: 50vh;
+}
+
+/* NAVIGATION */
 div.nav-wrapper, nav.grey.darken-4{
     height: 45px;
     line-height: 45px;
 }
-iframe{
-    /*height: 50%;*/
-}
 a#logo{
     margin-left: 20px;
 }
+/* END NAVIGATION */
 
+
+/*sticky footer*/
 body {
     display: flex;
     min-height: 100vh;
@@ -18,6 +45,7 @@ body {
   main {
     flex: 1 0 auto;
   }
+/* END sticky footer */
 
 /* *** PLAYLIST PAGE *** */
 // Media Query Ranges
@@ -74,15 +102,29 @@ div.cards-container {
   .card {
     display: inline-block;
     overflow: visible;
+        }
   }
 div.card{
-    border-radius: 30px;
+    background: -webkit-linear-gradient(to left, #000000 , #434343);
+    background: linear-gradient(to left, #000000 , #434343);
+    border-radius: 6px;
+}
+a.btn-large.waves-effect.waves.grey.darken-4{
+    background: -webkit-linear-gradient(to left, #000000 , #085e72);
+    background: linear-gradient(to left, #000000 , #085e72);
 }
 strong{
     margin-top: 5px;
 }
 h1 {
     text-shadow:
+    1px 0px 1px #ccc, 0px 1px 1px #eee,
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
 }
 /* Main EMAIL list*/
 main#email-main{

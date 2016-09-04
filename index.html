@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
     <title>Q1 Project</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" href="https://libraries.cdnhttps.com/ajax/libs/materialize/0.97.3/css/materialize.css">
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="index-body">
     <!-- TOP NAVIGATION -->
     <nav class="grey darken-4" role="navigation">
         <div class="nav-wrapper "><a id="logo" href="#" class="brand-logo">CHANNEL ZER0</a>
@@ -31,13 +31,62 @@
         </div>
     </nav>
 
+
     <!-- MAIN / CONTAINER -->
-    <main id="main">
-        <div id="content-container" class="container">
-            <div id="content-target"></div>
+    <main id="index-main">
+        <canvas id="canvas"></canvas>
+        <div id="content-container" class="container center">
+            <!-- <div id="content-target"></div> -->
+
+            <div class="aligner">
+                <div class="aligner-item aligner-item--top">…</div>
+
+                <!-- ROW -->
+                <div class="row">
+                    <!-- COLUMNS-->
+                    <div class="col s12 m4 aligner">
+                        <!-- CARD#1 -->
+                        <div class="card center">
+                            <div class="card-content center">
+                                <span class="card-title grey-text"><h4>Playlist</h4></span>
+                                <a class="btn-large waves-effect waves grey darken-4">
+                                    <i class="material-icons grey-text">album</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 aligner">
+                        <!-- CARD#2 -->
+                        <div class="card center">
+                            <div class="card-content center">
+                                <span class="card-title grey-text"><h4>Mix</h4></span>
+                                <a class="btn-large waves-effect waves grey darken-4">
+                                    <i class="material-icons grey-text">play_arrow</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 aligner">
+                        <!-- CARD#3 -->
+                        <div class="card center">
+                            <div class="card-content center">
+                                <span class="card-title grey-text"><h4>List</h4></span>
+                                <a class="btn-large waves-effect waves grey darken-4">
+                                    <i class="material-icons grey-text">mode_edit</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Column-->
+                </div>
+                <!-- END Row -->
+
+
+            </div>
+            <!-- END Aligner -->
+            <div class="aligner-item aligner-item--bottom">…</div>
         </div>
-
-
+        <!-- END Container -->
     </main>
 
     <!-- FOOTER / NAVIGATION-->
@@ -61,7 +110,6 @@
     <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/external/jquery/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-
     <script src="js/app.js"></script>
 </body>
 
