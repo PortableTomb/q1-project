@@ -11,14 +11,14 @@ $xhr.done(function(data) {
 $(function() {
 	var canvas = document.querySelector('canvas'),
       ctx = canvas.getContext('2d'),
-      color = 'rgba(19, 188, 228, .5)';
+      color = 'rgba(185,226,222, .75)';
 
    var w = window.innerWidth;
    var h = window.innerHeight;
    canvas.width = w;
 	canvas.height = h;
 	ctx.fillStyle = color;
-	ctx.lineWidth = .5;
+	ctx.lineWidth = .75;
 	ctx.strokeStyle = color;
 
 	var mousePosition = {
@@ -27,9 +27,9 @@ $(function() {
 	};
 
 	var dots = {
-    num: 66,
-    distance: 500,
-    d_radius: 500,
+    num: 33,
+    distance: 600,
+    d_radius: 750,
     velocity: -.1,
     array: []
 	};
@@ -41,13 +41,13 @@ $(function() {
 		this.vx = dots.velocity + Math.random();
 		this.vy = dots.velocity + Math.random();
 
-		this.radius = Math.random() * 5;
+		this.radius = Math.random() * 2;
 	}
 
 	Dot.prototype = {
 		create: function(){
 			ctx.beginPath();
-			ctx.arc(this.x, this.y, this.radius, 10, Math.PI * 2, false);
+			ctx.arc(this.x, this.y, this.radius, 10, Math.PI * 3, false);
 			ctx.fill();
 		},
 
@@ -117,7 +117,7 @@ $(function() {
 		dots.num += 5;
 	});
 
-	setInterval(createDots, 1000/100);
+	setInterval(createDots, 10/10);
 
   $(window).on('resize', function() {
     canvas.width = w;

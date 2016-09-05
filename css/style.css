@@ -1,6 +1,54 @@
-/* Index Columns Flexbox */
-.aligner {
-  height: 100%;
+/**/
+/* mix.HTML  */
+/**/
+h4, a, a#logo.brand-logo{
+    font-family: 'Megrim', cursive;
+}
+body#mix-body{
+    background: -webkit-linear-gradient(to left, #000000 , #434343);
+    background: linear-gradient(to left, #000000 , #434343);
+}
+div.mix.row.blue-grey.darken-3{
+    border-top: 2px #ECEFF1 solid;
+    background: -webkit-linear-gradient(to left, #6f6f6f, #434343 );
+    background: linear-gradient(to left, #6f6f6f, #434343 );
+    padding-right: 10px;
+    height: 60px;
+    line-height: 30px;
+}
+span#current-mix.blue-grey-text{
+    font-size: 2rem;
+}
+span.grey-text{
+  font-size: 2.5rem;
+}
+/**/
+/* END index.HTML Columns Flexboxx */
+/**/
+div.container{
+margin-top: 20px;
+}
+div.col.s4{
+padding-top: 10px;
+}
+a.btn-floating.btn.waves-effect.waves-light.white-text.teal.lighten-1{
+    font-size: 1rem;
+    /*border: #ECEFF1 .25px solid;*/
+    /*background: -webkit-linear-gradient(to left, #000000 , #6f6f6f);
+    background: linear-gradient(to left, #000000 , #6f6f6f);*/
+}
+
+/**/
+/* index.HTML */
+/**/
+body#index-body{
+    background: -webkit-linear-gradient(to left, #000000 , #434343);
+    background: linear-gradient(to left, #000000 , #434343);
+}
+/* index.HTML Columns Flexbox */
+div.aligner {
+  height: 100vh;
+  max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,17 +62,32 @@
 .aligner-item--bottom {
   align-self: flex-end;
 }
-/* END Index Columns Flexbox */
+/* END index.HTML Columns Flexbox */
 
-/* Index Card / Height */
+/* index.HTML Card / Height */
 div.card.center{
-    height: 50%;
+    width: 200px;
+    /*height: 50%;*/
+}
+div.col.s12.m4.aligner{
+    max-height: 100%;
+/*width: 50%*/
 }
 div.col.s12.m4{
-height: 50vh;
+padding:10px;
+/*height: 50vh;*/
 }
-
+div.card-content.center{
+    width: 100%;
+}
+/**/
 /* NAVIGATION */
+/**/
+/*div.nav-wrapper{
+    position: absolute;
+    top:0px;
+    z-index: 9;
+}*/
 div.nav-wrapper, nav.grey.darken-4{
     height: 45px;
     line-height: 45px;
@@ -32,10 +95,12 @@ div.nav-wrapper, nav.grey.darken-4{
 a#logo{
     margin-left: 20px;
 }
+/**/
 /* END NAVIGATION */
-
-
+/**/
+/**/
 /*sticky footer*/
+/**/
 body {
     display: flex;
     min-height: 100vh;
@@ -45,10 +110,12 @@ body {
   main {
     flex: 1 0 auto;
   }
+ /**/
 /* END sticky footer */
-
+/**/
+/**/
 /* *** PLAYLIST PAGE *** */
-// Media Query Ranges
+/**/
 $small-screen-up: 601px !default;
 $medium-screen-up: 993px !default;
 $large-screen-up: 1201px !default;
@@ -109,9 +176,9 @@ div.card{
     background: linear-gradient(to left, #000000 , #434343);
     border-radius: 6px;
 }
-a.btn-large.waves-effect.waves.grey.darken-4{
-    background: -webkit-linear-gradient(to left, #000000 , #085e72);
-    background: linear-gradient(to left, #000000 , #085e72);
+a.btn.waves-effect.waves.grey.darken-4{
+    background: -webkit-linear-gradient(to left, #00695c , #4db6ac);
+    background: linear-gradient(to left, #00695c , #4db6ac);
 }
 strong{
     margin-top: 5px;
