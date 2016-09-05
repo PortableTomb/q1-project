@@ -83,11 +83,9 @@ div.card-content.center{
 /**/
 /* NAVIGATION */
 /**/
-/*div.nav-wrapper{
-    position: absolute;
-    top:0px;
-    z-index: 9;
-}*/
+div.nav-wrapper{
+    border-bottom: 2px #26a69a solid;
+}
 div.nav-wrapper, nav.grey.darken-4{
     height: 45px;
     line-height: 45px;
