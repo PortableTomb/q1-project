@@ -1,6 +1,32 @@
+img#gif1, img#gif2, img#gif3, img#gif4, img#gif5, img#gif6, img#gif7{
+    height: 100%;
+    /*min-width: 1024px;*/
+}
+
+div#target{
+    height: 100vh;
+    display: inline-block;
+    background-size: cover;
+    overflow:hidden;
+}
+div#img{
+display: block;
+text-align: center;
+margin: auto;
+}
+img#triangle.triangle{
+    padding-top: 50px;
+    text-align: center;
+    margin: auto;
+    width: 40%;
+
+}
 /**/
 /* mix.HTML  */
 /**/
+h4{
+    font-weight: bold;
+}
 h4, a, a#logo.brand-logo{
     font-family: 'Megrim', cursive;
 }
@@ -9,7 +35,7 @@ body#mix-body{
     background: linear-gradient(to left, #000000 , #434343);
 }
 div.mix.row.blue-grey.darken-3{
-    border-top: 2px #ECEFF1 solid;
+    margin: 0;
     background: -webkit-linear-gradient(to left, #6f6f6f, #434343 );
     background: linear-gradient(to left, #6f6f6f, #434343 );
     padding-right: 10px;
