@@ -113,6 +113,9 @@ div.card-content.center{
 /**/
 /* NAVIGATION */
 /**/
+div.navbar-fixed{
+  height: 45px;
+}
 div.nav-wrapper{
     border-bottom: 2px #26a69a solid;
 }
