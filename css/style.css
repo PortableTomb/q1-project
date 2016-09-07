@@ -1,7 +1,11 @@
-img#gif1, img#gif2, img#gif3, img#gif4, img#gif5, img#gif6, img#gif7{
+img#gif1, img#gif2{
     height: 100%;
     /*min-width: 1024px;*/
 }
+a:link {    color: #64ffda; }
+a:visited { color: #fff; }
+a:hover {   color: #00bfa5; }
+a:active {  color: #00695c; }
 
 div#target{
     height: 100vh;
@@ -223,4 +227,19 @@ main#email-main{
     background: #000000; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #000000 , #434343);
     background: linear-gradient(to left, #000000 , #434343);
+}
+p.email-info{
+    color: #1de9b6;
+    padding-top: 50px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+button.btn.waves-effect.waves-light{
+    top: 20px;
+    margin: auto;
+    clear: both;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
 }

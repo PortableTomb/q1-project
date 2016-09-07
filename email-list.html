@@ -37,20 +37,23 @@
 
     <!-- MAIN -->
     <main id="email-main">
-        <div class="aligner">
-            <div class="aligner-item aligner-item--top">…</div>
-            <div class="container">
-                <form>
-                    <div class="row">
-                        <div class="input-field col offset-s3 s6 offset-s3 offset-m3 m6 offset-m3 aligner">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
+        <!-- <div class="aligner"> -->
+        <!-- <div class="aligner-item aligner-item--top">…</div> -->
+        <div class="container">
+            <form id="myForm">
+                <div class="row">
+                    <p class="email-info">Sign up and we'll notify you when the next mix is up!</p>
+                    <div class="input-field col offset-s3 s6 offset-s3 offset-m3 m6 offset-m3 teal accent-1">
+                        <input placeholder="EnterEmail Address" id="email" type="email" class="validate">
+                        <label for="email"></label>
                     </div>
-                </form>
+                    <div>
+                        <button id="submitButton" class="btn waves-effect waves-light" type="submit" name="action">submit</button>
+                    </div>
+            </form>
             </div>
-        </div>
-        <div class="aligner-item aligner-item--bottom">…</div>
+            <!-- </div> -->
+            <!-- <div class="aligner-item aligner-item--bottom">…</div> -->
     </main>
     <!-- END MAIN -->
     <!-- STICKY FOOTER -->
@@ -62,7 +65,6 @@
                     <li><a href="#">F</a></li>
                 </ul>
                 <div>
-                    <!-- IFRAME PLAYER -->
 
                 </div>
                 <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
@@ -81,7 +83,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/external/jquery/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
-    <script src="js/app.js"></script>
+    <script src="js/email-list.js"></script>
 </body>
 
 </html>

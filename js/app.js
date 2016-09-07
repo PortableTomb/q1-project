@@ -1,5 +1,6 @@
 // AJAX / JSON
-var $xhr = $.getJSON('');
+var $xhr = $.getJSON('https://soundcloud.com/oembed?url=https%3A%2F%2Fsoundcloud.com%2Fforss%2Fflickermood');
+// var $xhr = $.getJSON('https://soundcloud.com/oembed?url=https%3A%2F%2Fsoundcloud.com%2tycho%2tycho-division');
 
 $xhr.done(function(data) {
     if ($xhr.status !== 200) {
@@ -8,6 +9,9 @@ $xhr.done(function(data) {
     console.log(data);
 });
 
+// https://soundcloud.com/tycho/tycho-division
+
+// ANIMATION
 $(function() {
 	var canvas = document.querySelector('canvas'),
       ctx = canvas.getContext('2d'),
@@ -37,25 +41,19 @@ $(function() {
 	function Dot(){
 		this.x = Math.random() * w;
 		this.y = Math.random() * h;
-
 		this.vx = dots.velocity + Math.random();
 		this.vy = dots.velocity + Math.random();
-
 		this.radius = Math.random() * 2;
 	}
-
 	Dot.prototype = {
 		create: function(){
 			ctx.beginPath();
 			ctx.arc(this.x, this.y, this.radius, 10, Math.PI * 3, false);
 			ctx.fill();
 		},
-
 		animate: function() {
 			for(i = 0; i < dots.num; i++){
-
 				var dot = dots.array[i];
-
 				if(dot.y < 0 || dot.y > h){
 					dot.vx = dot.vx;
 					dot.vy = - dot.vy;
@@ -68,7 +66,6 @@ $(function() {
 				dot.y += dot.vy;
 			}
 		},
-
 		line: function() {
 			for(i = 0; i < dots.num; i++){
 				for(j = 0; j < dots.num; j++){
