@@ -23,6 +23,7 @@ $(document).ready(function() {
             // track number variable
             var track1 = track.permalink_url;
             SC.oEmbed(track1, {
+                auto_play: true,
                 element: document.getElementById('target')
             });
             // player style and position
@@ -55,6 +56,7 @@ $(document).ready(function() {
             // embed track link to target
             var track2 = track.permalink_url;
             SC.oEmbed(track2, {
+                auto_play: true,
                 element: document.getElementById('target')
             });
             // player style and position
@@ -87,6 +89,7 @@ $(document).ready(function() {
             // embed track link to target
             var track3 = track.permalink_url;
             SC.oEmbed(track3, {
+                auto_play: true,
                 element: document.getElementById('target')
             });
             // player style and position
@@ -119,6 +122,7 @@ $(document).ready(function() {
             // embed track link to target
             var track4 = track.permalink_url;
             SC.oEmbed(track4, {
+                auto_play: true,
                 element: document.getElementById('target')
             });
             // player style and position
@@ -151,6 +155,7 @@ $(document).ready(function() {
             // embed track link to target
             var track5 = track.permalink_url;
             SC.oEmbed(track5, {
+                auto_play: true,
                 element: document.getElementById('target')
             });
             // player style and position
@@ -184,6 +189,7 @@ $(document).ready(function() {
             // embed track link to target
             var track6 = track.permalink_url;
             SC.oEmbed(track6, {
+                auto_play: true,
                 element: document.getElementById('target')
             });
             // player style and position
@@ -216,6 +222,7 @@ $(document).ready(function() {
             // embed track link to target
             var track7 = track.permalink_url;
             SC.oEmbed(track7, {
+                auto_play: true,
                 element: document.getElementById('target')
             });
             // player style and position
@@ -248,6 +255,7 @@ $(document).ready(function() {
             // embed track link to target
             var track8 = track.permalink_url;
             SC.oEmbed(track8, {
+                auto_play: true,
                 element: document.getElementById('target')
             });
             // player style and position
@@ -280,6 +288,7 @@ $(document).ready(function() {
             // embed track link to target
             var track9 = track.permalink_url;
             SC.oEmbed(track9, {
+                auto_play: true,
                 element: document.getElementById('target')
             });
             // player style and position
