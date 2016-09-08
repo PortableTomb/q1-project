@@ -34,6 +34,9 @@ h4{
 h4, a, a#logo.brand-logo{
     font-family: 'Megrim', cursive;
 }
+a.band-link{
+  font-family:sans-serif;
+}
 body#mix-body{
     background: -webkit-linear-gradient(to left, #000000 , #434343);
     background: linear-gradient(to left, #000000 , #434343);

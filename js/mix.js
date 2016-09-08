@@ -4,15 +4,15 @@ var currentTrack = 0;
 var finish = SC.Widget.Events.FINISH;
 
 var songURLs = [
-    "https://soundcloud.com/tycho/tycho-division",
-    "https://soundcloud.com/massive-attack-2/nas-vs-massive-attack",
-    "https://soundcloud.com/littlesimz/wings-prod-iamnobodi",
-    "https://soundcloud.com/eskmo/the-sun-is-a-drum-1",
-    "https://soundcloud.com/adultswimsingles/dj-paypal",
-    "https://soundcloud.com/botany/raw-light-overture",
+    "https://soundcloud.com/danger_mouse/somersault-feat-sia-danger-mouse-remix-rejected",
     "https://soundcloud.com/massappealrecs/dj-shadow-nobody-speak-feat-run-the-jewels",
     "https://soundcloud.com/artemov111/jay-electronica-exhibit-b-feat-mos-def",
-    "https://soundcloud.com/yppah/never-mess-with-sunday"
+    "https://soundcloud.com/littlesimz/wings-prod-iamnobodi",
+    "https://soundcloud.com/adultswimsingles/dj-paypal",
+    "https://soundcloud.com/botany/raw-light-overture",
+    "https://soundcloud.com/massive-attack-2/nas-vs-massive-attack",
+    "https://soundcloud.com/yppah/never-mess-with-sunday",
+    "https://soundcloud.com/tycho/tycho-division"
 ];
 
 // READY
@@ -29,6 +29,7 @@ $( document ).ready(function() {
 
 // LoadSONG function
  function loadSong(track){
+     currentTrack = track;
      $("#target").empty();
      // getJSON for track
      var $xhr = $.getJSON(`https://cors-anywhere.herokuapp.com/http://api.soundcloud.com/resolve?url=${songURLs[track]}&client_id=cf8a5ad4e3dc1198d5853833155de0bc`);
@@ -42,16 +43,27 @@ $( document ).ready(function() {
        SC.oEmbed(trackURL, {
          auto_play: true,
          element: document.getElementById('target')
-       });
-       // player style and position
-       $("#target").css({
-         height: "100px",
-         width: "500px",
-         float: "right",
-         position: "absolute",
-         bottom: "75px",
-         right: "30px",
-         zindex: "99"
+       })
+       .then(function(embed) {
+           // player style and position
+           $("#target").css({
+             height: "100px",
+             width: "500px",
+             float: "right",
+             position: "absolute",
+             bottom: "75px",
+             right: "30px",
+             zindex: "99"
+           });
+
+           var iframeElement = document.querySelector("iframe");
+           var widget = SC.Widget(iframeElement);
+           widget.bind(finish, function(){
+             currentTrack++;
+             if (currentTrack < 10) {
+                 loadSong(currentTrack);
+             }
+             });
        });
      });
  }
@@ -110,18 +122,11 @@ var $btn6 = $('#btn6');
   $($btn9).click(function(event) {
     loadSong(8);
   });
-  // BUTTON#9
+  // BUTTON#ALL
   var $playall = $('#btn-all');
   $($playall).click(function(event) {
-var iframeElement = document.querySelector("iframe");
-var widget = SC.Widget(iframeElement);
-widget.bind(finish, function(){
-    currentTrack ++;
-    if (currentTrack < 10) {
-        loadSong(currentTrack);
-    }
-});
-});
+    loadSong(0);
+  });
 
 
 
