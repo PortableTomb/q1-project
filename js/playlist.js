@@ -1,6 +1,6 @@
-$('#track1-img').click(function(){
-    loadSong(0);
-});
+
+
+
 
 
 // CANVAS ANIMATION FROM CODEPEN

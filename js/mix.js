@@ -1,26 +1,36 @@
 var currentTrack = 0;
-// var iframeElement = document.querySelector('iframe');
-// var widget = SC.Widget(iframeElement);
 var finish = SC.Widget.Events.FINISH;
 var animationRunning = false;
 
+// Song URLs for loadSong function
 var songURLs = [
-    "https://soundcloud.com/danger_mouse/somersault-feat-sia-danger-mouse-remix-rejected",
-    "https://soundcloud.com/massappealrecs/dj-shadow-nobody-speak-feat-run-the-jewels",
-    "https://soundcloud.com/artemov111/jay-electronica-exhibit-b-feat-mos-def",
-    "https://soundcloud.com/littlesimz/wings-prod-iamnobodi",
-    "https://soundcloud.com/adultswimsingles/dj-paypal",
-    "https://soundcloud.com/botany/raw-light-overture",
-    "https://soundcloud.com/massive-attack-2/nas-vs-massive-attack",
-    "https://soundcloud.com/yppah/never-mess-with-sunday",
-    "https://soundcloud.com/tycho/tycho-division"
+    'https://soundcloud.com/danger_mouse/somersault-feat-sia-danger-mouse-remix-rejected',
+    'https://soundcloud.com/massappealrecs/dj-shadow-nobody-speak-feat-run-the-jewels',
+    'https://soundcloud.com/artemov111/jay-electronica-exhibit-b-feat-mos-def',
+    'https://soundcloud.com/littlesimz/wings-prod-iamnobodi',
+    'https://soundcloud.com/adultswimsingles/dj-paypal',
+    'https://soundcloud.com/botany/raw-light-overture',
+    'https://soundcloud.com/massive-attack-2/nas-vs-massive-attack',
+    'https://soundcloud.com/yppah/never-mess-with-sunday',
+    'https://soundcloud.com/tycho/tycho-division'
 ];
 
-// READY
-$( document ).ready(function() {
+//
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
 
 // TOASTS
-Materialize.toast('Hit a button to load a track. Press all for autoplay.', 5000, 'rounded');
+Materialize.toast('Hit a button to load a track. Press all for autoplay.', 2000, 'rounded');
+
 
 
 // SC initialization
@@ -33,7 +43,7 @@ Materialize.toast('Hit a button to load a track. Press all for autoplay.', 5000,
  function loadSong(track){
      currentTrack = track;
      $("#target").empty();
-
+// Run Animation w/ Song
      if (!animationRunning) {
         anim();
         animationRunning = true;
@@ -85,8 +95,7 @@ Materialize.toast('Hit a button to load a track. Press all for autoplay.', 5000,
 
  });
 
-  // End document ready
-});
+
 
 // ================================================
 // CANVAS ANIMATION FROM CODEPEN
@@ -101,7 +110,7 @@ var ctx = c.getContext("2d");
 
 var maxParticles = 100;
 var particles = [];
-var hue = 128;
+var hue = 0;
 
 mouse = {};
 mouse.size = 10;
@@ -111,7 +120,7 @@ mouse.y = mouse.ty = h/2;
 var clearColor = "rgba(0, 0, 0, .3)";
 
 function random(min, max){
-	return Math.random() * (max - min) + min
+	return Math.random() * (max - min) + min;
 }
 
 function distance(x1, y1, x2, y2){
@@ -122,7 +131,7 @@ function P(){}
 
 P.prototype = {
 	init: function(){
-		this.size = this.origSize = random(3, 8);
+		this.size = this.origSize = random(3, 20);
 		this.x = mouse.x;
 		this.y = mouse.y;
 		this.sides = random(3, 10);
@@ -135,8 +144,9 @@ P.prototype = {
 
 	draw: function(){
 		ctx.globalCompositeOperation = "lighter";
-		ctx.strokeStyle = "hsla("+hue+", 100%, 50%, "+this.alpha+")";
-		ctx.beginPath();
+		ctx.strokeStyle = "hsla("+hue+", 255%, 100%, "+this.alpha+")";
+        // ctx.fillStyle = "hsla("+hue+", 100%, 50%, "+( this.alpha *.4 )+")";
+        ctx.beginPath();
 		ctx.moveTo(this.x + this.size * Math.cos(0), this.y + this.size *  Math.sin(1));
 		for(var i=0; i<this.sides; i++){
 			ctx.lineTo(this.x + this.size * Math.cos(i * 2 * Math.PI / this.sides), this.y + this.size * Math.sin(i * 2 * Math.PI / this.sides));
@@ -159,24 +169,24 @@ P.prototype = {
 			if((this.y - rad <= 0 && this.vy < 0) || (this.y + rad >= h && this.vy > 0)){
 				this.vy *= -1;
 			}
-			this.alpha *= .978;
+			this.alpha *= 0.978;
 			this.x += this.vx;
 			this.y += this.vy;
-			this.vy += .1;
-			this.size += .4;
+			this.vy += 0.1;
+			this.size += 0.4;
 			this.life++;
 		} else {
 			this.init();
 		}
 
 	}
-}
+};
 
 
 mouse.move = function(){
-	if(!distance(mouse.x, mouse.y, mouse.tx, mouse.ty) <= .1){
-  	mouse.x += (mouse.tx - mouse.x) * .2;
-		mouse.y += (mouse.ty - mouse.y) * .2;
+	if(!distance(mouse.x, mouse.y, mouse.tx, mouse.ty) <= 0.1){
+  	mouse.x += (mouse.tx - mouse.x) * 0.2;
+		mouse.y += (mouse.ty - mouse.y) * 0.2;
 	}
 	ctx.strokeRect(mouse.x - (mouse.size/2), mouse.y - (mouse.size/2), mouse.size, mouse.size);
 };
@@ -200,9 +210,9 @@ mouse.mouseleave = function(e){
 
 window.addEventListener("mousemove", mouse.touches);
 window.addEventListener("touchstart", mouse.touches);
-window.addEventListener("touchmove", mouse.touches)
+window.addEventListener("touchmove", mouse.touches);
 
-c.addEventListener("mouseleave", mouse.mouseleave)
+c.addEventListener("mouseleave", mouse.mouseleave);
 
 window.addEventListener("resize", function(){
 	w = c.width = window.innerWidth;
@@ -232,4 +242,12 @@ function anim(){
 
 	hue += 0.1;
 	requestAnimationFrame(anim);
+}
+
+var songId = getParameterByName('song');
+if(songId){
+    var parseSongId = parseInt(songId);
+    if ( parseSongId >= 0 && parseSongId < songURLs.length ) {
+        loadSong(parseSongId);
+    }
 }
