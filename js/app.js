@@ -129,10 +129,10 @@ $(function() {
 // SITE CONTENT
 $(document).ready(function() {
 
-
-$("#place-order1").click(function() {
-$('#content-target').children().empty();
-});
+$(".button-collapse").sideNav();
+// $("#place-order1").click(function() {
+// $('#content-target').children().empty();
+// });
 
 
 
