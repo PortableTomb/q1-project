@@ -1,8 +1,18 @@
+// TOASTS
+Materialize.toast('Press 1 to Autoplay. Hit any button to load a track.', 3000, 'rounded');
+
+// SC initialization
+  console.log(SC);
+  SC.initialize({
+    client_id: 'cf8a5ad4e3dc1198d5853833155de0bc'
+  });
+
+// Global Variables
 var currentTrack = 0;
 var finish = SC.Widget.Events.FINISH;
 var animationRunning = false;
 
-// Song URLs for loadSong function
+// Song URLs to pass to loadSong function
 var songURLs = [
     'https://soundcloud.com/danger_mouse/somersault-feat-sia-danger-mouse-remix-rejected',
     'https://soundcloud.com/massappealrecs/dj-shadow-nobody-speak-feat-run-the-jewels',
@@ -15,77 +25,67 @@ var songURLs = [
     'https://soundcloud.com/tycho/tycho-division'
 ];
 
-//
+// Enables Oembed Play from playlist.html
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
         results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-
-
-// TOASTS
-Materialize.toast('Hit a button to load a track. Press all for autoplay.', 2000, 'rounded');
-
-
-
-// SC initialization
-  console.log(SC);
-  SC.initialize({
-    client_id: 'cf8a5ad4e3dc1198d5853833155de0bc'
-  });
-
-// LoadSONG function
- function loadSong(track){
+// LoadSong function for loading tracks
+ function loadSong( track ){
      currentTrack = track;
-     $("#target").empty();
-// Run Animation w/ Song
-     if (!animationRunning) {
+     $( '#target' ).empty();
+//  Animation Check for Tracks
+     if ( !animationRunning ) {
         anim();
         animationRunning = true;
      }
-
-     // getJSON for track
-     var $xhr = $.getJSON(`https://cors-anywhere.herokuapp.com/http://api.soundcloud.com/resolve?url=${songURLs[track]}&client_id=cf8a5ad4e3dc1198d5853833155de0bc`);
-     $xhr.done(function(track) {
-       var count = 0;
-       if ($xhr.status !== 200) {
+// getJSON for Tracks - Takes songURLs from array(above)
+  var $xhr = $.getJSON(`https://cors-anywhere.herokuapp.com/http://api.soundcloud.com/resolve?url=${songURLs[track]}&client_id=cf8a5ad4e3dc1198d5853833155de0bc`);
+    $xhr.done(function( track ) {
+    var count = 0;
+       if ( $xhr.status !== 200 ) {
          return;
        }
-       // track number variable
-       var trackURL = track.permalink_url;
-       SC.oEmbed(trackURL, {
-         auto_play: true,
-         element: document.getElementById('target')
-       })
-       .then(function(embed) {
-           // player style and position
-           $("#target").css({
-             height: "100px",
-             width: "500px",
-             float: "right",
-             position: "absolute",
-             bottom: "75px",
-             right: "30px",
-             zindex: "99"
-           });
+// Track Embed Autoplay
+  var trackURL = track.permalink_url;
+    SC.oEmbed(trackURL, {
+      auto_play: true,
+      element: document.getElementById( 'target' )
+     })
+       .then(function( embed ) {
 
-           var iframeElement = document.querySelector("iframe");
-           var widget = SC.Widget(iframeElement);
-           widget.bind(finish, function(){
-             currentTrack++;
-             if (currentTrack < 10) {
-                 loadSong(currentTrack);
-             }
-             });
-       });
-     });
+// SC.oEmbed player style and position
+    $('#target').css({
+      height: '100px',
+      width: '500px',
+      float: 'right',
+      position: 'absolute',
+      bottom: '75px',
+      right: '30px',
+      zindex: '99'
+    });
+
+
+// SC Widget for autoplaying tracks
+  var iframeElement = document.querySelector( 'iframe' );
+  var widget = SC.Widget( iframeElement );
+    widget.bind(finish, function(){
+      currentTrack++;
+        if ( currentTrack < 10 ) {
+        loadSong( currentTrack );
+        }
+    });
+   });
+  });
  }
-// Event Handler
+
+// All-Buttons Event Handler for Tracks/Songs
  $('#all-buttons').on('click', 'a', function(event){
     var trackNumber = $(event.target).text();
     var songNumber = parseInt(trackNumber);
@@ -96,10 +96,9 @@ Materialize.toast('Hit a button to load a track. Press all for autoplay.', 2000,
  });
 
 
-
-// ================================================
-// CANVAS ANIMATION FROM CODEPEN
-// ================================================
+// ======================================================================
+// * OG CANVAS ANIMATION FROM CODEPEN / MODIFIED BY ME FOR THIS PROJECT *
+// ======================================================================
 
 window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
 
@@ -108,7 +107,7 @@ var w = c.width = window.innerWidth;
 var h = c.height = window.innerHeight;
 var ctx = c.getContext("2d");
 
-var maxParticles = 100;
+var maxParticles = 50;
 var particles = [];
 var hue = 0;
 
@@ -117,7 +116,7 @@ mouse.size = 10;
 mouse.x = mouse.tx = w/2;
 mouse.y = mouse.ty = h/2;
 
-var clearColor = "rgba(0, 0, 0, .3)";
+var clearColor = "rgba(0, 0, 0, .25)";
 
 function random(min, max){
 	return Math.random() * (max - min) + min;
@@ -131,15 +130,15 @@ function P(){}
 
 P.prototype = {
 	init: function(){
-		this.size = this.origSize = random(3, 20);
+		this.size = this.origSize = random(1, 20);
 		this.x = mouse.x;
 		this.y = mouse.y;
-		this.sides = random(3, 10);
+		this.sides = random(3, 8);
 		this.vx = random(-5, 5);
 		this.vy = random(-5, 5);
-		this.life = 0;
-		this.maxLife = random(50, 500);
-		this.alpha = 2;
+		this.life = 2;
+		this.maxLife = random(50, 100);
+		this.alpha = 0.5;
 	},
 
 	draw: function(){
@@ -152,7 +151,7 @@ P.prototype = {
 			ctx.lineTo(this.x + this.size * Math.cos(i * 2 * Math.PI / this.sides), this.y + this.size * Math.sin(i * 2 * Math.PI / this.sides));
 		}
 		ctx.closePath();
-		ctx.lineWidth = this.size/20;
+		ctx.lineWidth = this.size/10;
 		ctx.fill();
 		ctx.stroke();
 		this.update();
@@ -178,10 +177,8 @@ P.prototype = {
 		} else {
 			this.init();
 		}
-
 	}
 };
-
 
 mouse.move = function(){
 	if(!distance(mouse.x, mouse.y, mouse.tx, mouse.ty) <= 0.1){
@@ -226,7 +223,7 @@ for(var i=1; i<=maxParticles; i++) {
 		var p = new P();
 		p.init();
 		particles.push(p);
-	}, i * 50);
+	}, i * 100);
 }
 
 function anim(){
@@ -239,11 +236,12 @@ function anim(){
 		var p = particles[i];
 		p.draw();
 	}
-
 	hue += 0.1;
 	requestAnimationFrame(anim);
 }
+// End Animation
 
+// Loading a song from playlist.html
 var songId = getParameterByName('song');
 if(songId){
     var parseSongId = parseInt(songId);

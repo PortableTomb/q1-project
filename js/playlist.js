@@ -28,7 +28,7 @@ canvas.height = H;
 
 var particle_count = 110,
     particles = [],
-    color   = ["#80cbc4", "#26a69a", "#00796b","#004d40"];
+    color   = ["#fff","#e0f2f1", "#b2dfdb", "#90cbc4"];
 function Particle()
 {
 

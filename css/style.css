@@ -78,6 +78,24 @@ body#index-body{
     background: -webkit-linear-gradient(to left, #000000 , #434343);
     background: linear-gradient(to left, #000000 , #434343);
 }
+h3.index-info{
+  text-transform: uppercase;
+  font-family: 'Megrim', cursive;
+  font-size: 2rem;
+  color: #1de9b6;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+  font-weight: bolder;
+  top: 50px;
+}
+a.btn.waves-effect.waves.grey.darken-4{
+
+    background: -webkit-linear-gradient(to left, #00695c , #4db6ac);
+    background: linear-gradient(to left, #00695c , #4db6ac);
+}
+a.btn.waves-effect.waves.grey.darken-4:hover{
+     background: -webkit-linear-gradient(to left, #00695c , #1de9b6);
+     background: linear-gradient(to left, #00695c , #1de9b6);
+}
 /* index.HTML Columns Flexbox */
 div.aligner {
   height: 100vh;
@@ -171,6 +189,15 @@ div#playlist-container{
   column-count: 3;
   column-width: 33%;
 }*/
+h3.playlist-info{
+  text-transform: uppercase;
+  font-family: 'Megrim', cursive;
+  font-size: 2rem;
+  color: #1de9b6;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+  font-weight: bolder;
+}
+
 div.cards-container {
   column-break-inside: avoid;
   .card {
@@ -183,10 +210,15 @@ div.card{
     background: linear-gradient(to left, #000000 , #434343);
     border-radius: 6px;
 }
-a.btn.waves-effect.waves.grey.darken-4{
+/*a.btn.waves-effect.waves.grey.darken-4{
+
     background: -webkit-linear-gradient(to left, #00695c , #4db6ac);
     background: linear-gradient(to left, #00695c , #4db6ac);
 }
+a.btn.waves-effect.waves.grey.darken-4:hover{
+     background: -webkit-linear-gradient(to left, #00695c , #1de9b6);
+     background: linear-gradient(to left, #00695c , #1de9b6);
+}*/
 strong{
     margin-top: 5px;
 }

@@ -37,14 +37,13 @@
 
     <!-- MAIN -->
     <main id="email-main">
-        <!-- <div class="aligner"> -->
-        <!-- <div class="aligner-item aligner-item--top">…</div> -->
         <div class="container">
+
             <form id="myForm">
                 <div class="row">
-                    <p class="email-info">Sign up and we'll notify you when the next mix is up!</p>
+                    <p class="email-info">Sign up and we'll notify you when a new mix is ready!</p>
                     <div class="input-field col offset-s3 s6 offset-s3 offset-m3 m6 offset-m3 teal accent-1">
-                        <input placeholder="EnterEmail Address" id="email" type="email" class="validate">
+                        <input id="email" placeholder="Enter Email Address" type="email" required="" aria-required="true" class="validate">
                         <label for="email"></label>
                     </div>
                     <div>
@@ -52,32 +51,22 @@
                     </div>
             </form>
             </div>
-            <!-- </div> -->
-            <!-- <div class="aligner-item aligner-item--bottom">…</div> -->
+
     </main>
     <!-- END MAIN -->
     <!-- STICKY FOOTER -->
-    <footer class="grey darken-4 grey-text text-lighten-4">
-
+    <footer id="footer" class="grey darken-4 grey-text text-lighten-4">
         <nav class="grey darken-4" role="navigation">
             <div class="nav-wrapper ">
+                <a href="#" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">F</a></li>
-                </ul>
-                <div>
-
-                </div>
-                <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
                     <li><a href="#">Links</a></li>
                 </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
         </nav>
-
         </div>
     </footer>
     <!-- END STICKY FOOTER -->
-
 
     <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/external/jquery/jquery.js"></script>
