@@ -1,33 +1,36 @@
-img#gif1, img#gif2{
-    height: 100%;
-    /*min-width: 1024px;*/
+
+a:link {
+  color: #64ffda;
 }
-a:link {    color: #64ffda; }
-a:visited { color: #fff; }
-a:hover {   color: #00bfa5; }
-a:active {  color: #00695c; }
+a:visited {
+  color: #fff;
+}
+a:hover {
+  color: #00bfa5;
+}
+a:active {
+  color: #00695c;
+}
 
 div#target{
-    height: 100vh;
-    display: inline-block;
-    background-size: cover;
-    overflow:hidden;
+  height: 100vh;
+  display: inline-block;
+  background-size: cover;
+  overflow:hidden;
 }
 div#img{
-display: block;
-text-align: center;
-margin: auto;
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 img#triangle.triangle{
-    padding-top: 50px;
-    text-align: center;
-    margin: auto;
-    width: 40%;
-
+  padding-top: 50px;
+  text-align: center;
+  margin: auto;
+  width: 40%;
 }
-/**/
+
 /* mix.HTML  */
-/**/
 h4{
     font-weight: bold;
 }
@@ -55,9 +58,7 @@ span#current-mix.blue-grey-text{
 span.grey-text{
   font-size: 2.5rem;
 }
-/**/
 /* END index.HTML Columns Flexboxx */
-/**/
 div.container{
 margin-top: 20px;
 }
@@ -66,14 +67,9 @@ padding-top: 10px;
 }
 a.btn-floating.btn.waves-effect.waves-light.white-text.teal.lighten-1{
     font-size: 1rem;
-    /*border: #ECEFF1 .25px solid;*/
-    /*background: -webkit-linear-gradient(to left, #000000 , #6f6f6f);
-    background: linear-gradient(to left, #000000 , #6f6f6f);*/
 }
 
-/**/
 /* index.HTML */
-/**/
 body#index-body{
     background: -webkit-linear-gradient(to left, #000000 , #434343);
     background: linear-gradient(to left, #000000 , #434343);
@@ -88,7 +84,6 @@ h3.index-info{
   top: 50px;
 }
 a.btn.waves-effect.waves.grey.darken-4{
-
     background: -webkit-linear-gradient(to left, #00695c , #4db6ac);
     background: linear-gradient(to left, #00695c , #4db6ac);
 }
@@ -119,22 +114,18 @@ div.aligner {
 div.card.center{
     width: 200px;
     margin-left: 10px;
-    /*height: 50%;*/
 }
 div.col.s12.m4.aligner{
     height: 100%;
-/*width: 50%*/
 }
 div.col.s12.m4{
 padding:10px;
-/*height: 50vh;*/
 }
 div.card-content.center{
     width: 100%;
 }
-/**/
+
 /* NAVIGATION */
-/**/
 div.navbar-fixed{
   height: 45px;
 }
@@ -148,31 +139,26 @@ div.nav-wrapper, nav.grey.darken-4{
 a#logo{
     margin-left: 20px;
 }
-/**/
 /* END NAVIGATION */
-/**/
-/**/
+
 /*sticky footer*/
-/**/
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
-
-  main {
+main {
     flex: 1 0 auto;
   }
- /**/
 /* END sticky footer */
-/**/
-/**/
-/* *** PLAYLIST PAGE *** */
-/**/
+footer#footer.grey.darken-4.grey-text.text-lighten-4{
 
+}
+
+
+/* PLAYLIST PAGE */
 /* Main Playlist*/
 #canvas {
-    /*background: #000000; /* fallback for old browsers*/
     background: -webkit-linear-gradient(to left, #000000 , #434343);
     background: linear-gradient(to left, #000000 , #434343);
     position: fixed; /* or absolute */
@@ -185,10 +171,7 @@ main#playlist-main{
 div#playlist-container{
     margin-top: 20px;
 }
-/*div.col.s12.m4{
-  column-count: 3;
-  column-width: 33%;
-}*/
+
 h3.playlist-info{
   text-transform: uppercase;
   font-family: 'Megrim', cursive;
@@ -210,15 +193,7 @@ div.card{
     background: linear-gradient(to left, #000000 , #434343);
     border-radius: 6px;
 }
-/*a.btn.waves-effect.waves.grey.darken-4{
 
-    background: -webkit-linear-gradient(to left, #00695c , #4db6ac);
-    background: linear-gradient(to left, #00695c , #4db6ac);
-}
-a.btn.waves-effect.waves.grey.darken-4:hover{
-     background: -webkit-linear-gradient(to left, #00695c , #1de9b6);
-     background: linear-gradient(to left, #00695c , #1de9b6);
-}*/
 strong{
     margin-top: 5px;
 }
@@ -234,7 +209,6 @@ h1 {
 }
 /* Main EMAIL list*/
 main#email-main{
-    /*background: #cccccc;*/
     background: #000000; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #000000 , #434343);
     background: linear-gradient(to left, #000000 , #434343);

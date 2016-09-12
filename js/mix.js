@@ -61,21 +61,21 @@ function getParameterByName(name, url) {
        .then(function( embed ) {
 
 // SC.oEmbed player style and position
-    $('#target').css({
-      height: '100px',
-      width: '500px',
-      float: 'right',
-      position: 'absolute',
-      bottom: '75px',
-      right: '30px',
-      zindex: '99'
-    });
+  $( '#target' ).css({
+    height: '100px',
+    width: '500px',
+    float: 'right',
+    position: 'absolute',
+    bottom: '75px',
+    right: '30px',
+    zindex: '99'
+  });
 
 
 // SC Widget for autoplaying tracks
   var iframeElement = document.querySelector( 'iframe' );
   var widget = SC.Widget( iframeElement );
-    widget.bind(finish, function(){
+    widget.bind( finish, function(){
       currentTrack++;
         if ( currentTrack < 10 ) {
         loadSong( currentTrack );
@@ -86,8 +86,8 @@ function getParameterByName(name, url) {
  }
 
 // All-Buttons Event Handler for Tracks/Songs
- $('#all-buttons').on('click', 'a', function(event){
-    var trackNumber = $(event.target).text();
+  $( '#all-buttons' ).on('click', 'a', function(event){
+    var trackNumber = $( event.target ).text();
     var songNumber = parseInt(trackNumber);
     var track = songNumber -1;
     console.log(track);
