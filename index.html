@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Q1 Project</title>
     <!-- LINKS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/normalize/3.0.3/normalize.css">
@@ -18,20 +19,19 @@
 <body id="index-body">
     <!-- TOP NAVIGATION -->
     <div class="navbar-fixed">
-        <nav class="grey darken-4" role="navigation">
-            <div class="nav-wrapper "><a id="logo" href="index.html" class="brand-logo">CHANNEL ZER0</a>
+        <nav class="grey darken-4">
+            <div class="nav-wrapper"><a id="logo" href="index.html" class="brand-logo">CHANNEL ZER0</a>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="mix.html">Audio</a></li>
                     <li><a href="playlist.html">Playlist</a></li>
+                    <li><a href="mix.html">Audio</a></li>
                     <li><a href="email-list.html">Contact</a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="mix.html">Audio</a></li>
                     <li><a href="playlist.html">Playlist</a></li>
+                    <li><a href="mix.html">Audio</a></li>
                     <li><a href="email-list.html">Contact</a></li>
                 </ul>
-
             </div>
         </nav>
     </div>
@@ -40,8 +40,8 @@
     <main id="index-main">
         <canvas id="canvas"></canvas>
         <div class="container center">
+            <!-- FLEXBOX -->
             <div class="aligner">
-
                 <div class="aligner-item aligner-item--top">…</div>
 
                 <!-- ROW -->
@@ -51,8 +51,10 @@
                     <div class="col s12 m4 aligner">
                         <!-- CARD#1 -->
                         <div class="card center">
-                            <div class="card-content center">
-                                <span class="card-title grey-text"><h4>Playlist</h4></span>
+                            <div class="index card-content center">
+                                <div class="card-title grey-text">
+                                    <h4>Playlist</h4>
+                                </div>
                                 <a href="playlist.html" class="btn waves-effect waves grey darken-4">
                                     <i class="material-icons grey-text">album</i>
                                 </a>
@@ -62,8 +64,10 @@
                     <div class="col s12 m4 aligner">
                         <!-- CARD#2 -->
                         <div class="card center">
-                            <div class="card-content center">
-                                <span class="card-title grey-text"><h4>Audio</h4></span>
+                            <div class="index card-content center">
+                                <div class="card-title grey-text">
+                                    <h4>Audio</h4>
+                                </div>
                                 <a href="mix.html" class="btn waves-effect waves grey darken-4">
                                     <i class="material-icons grey-text">play_arrow</i>
                                 </a>
@@ -73,8 +77,10 @@
                     <div class="col s12 m4 aligner">
                         <!-- CARD#3 -->
                         <div class="card center">
-                            <div class="card-content center">
-                                <span class="card-title grey-text"><h4>Contact</h4></span>
+                            <div class="index card-content center">
+                                <div class="card-title grey-text">
+                                    <h4>Contact</h4>
+                                </div>
                                 <a href="email-list.html" class="btn waves-effect waves grey darken-4">
                                     <i class="material-icons grey-text">mode_edit</i>
                                 </a>
@@ -95,15 +101,16 @@
 
     <!-- STICKY FOOTER -->
     <footer id="footer" class="grey darken-4 grey-text text-lighten-4">
-        <nav class="grey darken-4" role="navigation">
+        <nav class="grey darken-4">
             <div class="nav-wrapper ">
                 <a href="#" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Links</a></li>
+                    <li>
+                        <a href="https://imgs.xkcd.com/comics/gravitational_waves.png"><img id="linkedin" src="img/linkedin_gray.svg" alt="LinkedIn" /></a>
+                    </li>
                 </ul>
             </div>
         </nav>
-        </div>
     </footer>
     <!-- END STICKY FOOTER -->
 

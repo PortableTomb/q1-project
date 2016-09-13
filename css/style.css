@@ -52,18 +52,14 @@ div.mix.row.blue-grey.darken-3{
     height: 60px;
     line-height: 30px;
 }
-span#current-mix.blue-grey-text{
-    font-size: 2rem;
-}
-span.grey-text{
-  font-size: 2.5rem;
-}
+
+
 /* END index.HTML Columns Flexboxx */
 div.container{
-margin-top: 20px;
+    margin-top: 20px;
 }
 div.col.s4{
-padding-top: 10px;
+    padding-top: 10px;
 }
 a.btn-floating.btn.waves-effect.waves-light.white-text.teal.lighten-1{
     font-size: 1rem;
@@ -111,18 +107,22 @@ div.aligner {
 /* END index.HTML Columns Flexbox */
 
 /* index.HTML Card / Height */
-div.card.center{
-    width: 200px;
-    margin-left: 10px;
+div.card.center {
+  width: 200px;
+  margin-left: 10px;
 }
-div.col.s12.m4.aligner{
-    height: 100%;
+div.index.card-content.center {
+    width: 200px;
+    height: 175px;
+}
+div.col.s12.m4.aligner {
+  height: 100%;
 }
 div.col.s12.m4{
-padding:10px;
+  padding:10px;
 }
 div.card-content.center{
-    width: 100%;
+  width: 100%;
 }
 
 /* NAVIGATION */
@@ -130,40 +130,40 @@ div.navbar-fixed{
   height: 45px;
 }
 div.nav-wrapper{
-    border-bottom: 2px #26a69a solid;
+  border-bottom: 2px #26a69a solid;
 }
 div.nav-wrapper, nav.grey.darken-4{
-    height: 45px;
-    line-height: 45px;
+  height: 45px;
+  line-height: 45px;
 }
 a#logo{
-    margin-left: 20px;
+  margin-left: 20px;
+}
+img#linkedin{
+  width: 20px;
 }
 /* END NAVIGATION */
 
 /*sticky footer*/
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   }
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
   }
 /* END sticky footer */
-footer#footer.grey.darken-4.grey-text.text-lighten-4{
-
-}
 
 
 /* PLAYLIST PAGE */
 /* Main Playlist*/
 #canvas {
-    background: -webkit-linear-gradient(to left, #000000 , #434343);
-    background: linear-gradient(to left, #000000 , #434343);
-    position: fixed; /* or absolute */
-    z-index: -1;     /* put it behind all other elements */
-    }
+  background: -webkit-linear-gradient(to left, #000000 , #434343);
+  background: linear-gradient(to left, #000000 , #434343);
+  position: fixed; /* or absolute */
+  z-index: -1;     /* put it behind all other elements */
+  }
 main#playlist-main{
     /*background: #cccccc;*/
 
@@ -193,7 +193,12 @@ div.card{
     background: linear-gradient(to left, #000000 , #434343);
     border-radius: 6px;
 }
-
+span#current-mix.blue-grey-text{
+    font-size: 2rem;
+}
+span.grey-text{
+    font-size: 2.5rem;
+}
 strong{
     margin-top: 5px;
 }
@@ -227,4 +232,14 @@ button.btn.waves-effect.waves-light{
     display: block;
     text-transform: uppercase;
     text-align: center;
+}
+
+/*media queries*/
+  @media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  body {
+    background: -webkit-linear-gradient(to left, #000000 , #434343);
+    background: linear-gradient(to left, #000000 , #434343);
+  }
 }
