@@ -109,7 +109,7 @@ function createDots(){
   });
 });
 
-// SITE CONTENT
+// Jquery Mobile Menu
 $(document).ready(function() {
 $(".button-collapse").sideNav();
 });
